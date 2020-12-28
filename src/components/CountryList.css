@@ -1,0 +1,43 @@
+.country__details{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-direction: column;
+    background-color: #80cbc4;
+    margin: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+.country__detail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.country__top{
+    width: 100%;
+    padding: 10px;
+}
+.country__bottom{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.country__detailCol{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #fff;
+}
+.country__cases{
+    border-bottom: 5px solid #2196f3;
+    border-right: 1px solid #b2dfdb;
+}
+.country__recovered{
+    border-bottom: 5px solid #388e3c;
+    border-right: 1px solid #b2dfdb;
+}
+.country__deaths{
+    border-bottom: 5px solid #d50000;
+}
