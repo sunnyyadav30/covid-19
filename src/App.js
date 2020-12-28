@@ -22,7 +22,7 @@ function App() {
     fetchPosts()
   },[])
   return (
-    <Router>
+    <Router basename={'/covid-info'}>
       <Switch>
         <Route path="/mostinfected">
           <div className="App">
