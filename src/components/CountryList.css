@@ -3,8 +3,9 @@
     justify-content: left;
     align-items: baseline;
     flex-direction: column;
-    background-color: #80cbc4;
+    background-color: #64b5f6;
     margin: 10px;
+    min-width: 280px;
     box-shadow: 0px 0px 10px #ccc;
 }
 .country__detail{
@@ -40,4 +41,10 @@
 }
 .country__deaths{
     border-bottom: 5px solid #d50000;
+}
+
+@media(max-width:767px){
+    .country__details{
+        min-width: 300px;
+    }
 }

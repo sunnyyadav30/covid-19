@@ -1,13 +1,16 @@
 .header{
-    background-color: #00bfa5;
+    background-color: #2286c3;
     display: flex;
     padding: 15px 20px;
     align-items: center;
     justify-content: space-between;
     box-shadow: 1px 1px 10px #ccc;
 }
+.header img{
+    width: 150px;
+}
 .left-header a{
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 .right-header a{
@@ -19,4 +22,13 @@
     font-weight: 600;
     border-radius: 4px;
     color: #fff;
+}
+
+@media(max-width: 480px){
+    .header{
+        padding: 10px 20px;
+    }
+    .header img{
+        width: 100px;
+    }
 }

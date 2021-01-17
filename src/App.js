@@ -1,7 +1,6 @@
 import './App.css';
 import React,{useEffect, useState} from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import axios from 'axios'
 import Home from './components/Home'
 import Header from './components/Header'
 import MostCases from './components/MostCases'
@@ -13,13 +12,20 @@ function App() {
   const [data,setData] = useState({})
   const [loading,setLoading] = useState(false)
   useEffect(()=>{
-    const fetchPosts = async()=>{
-      setLoading(true)
-      let res = await axios.get('https://cors-anywhere.herokuapp.com/https://covid-api.mmediagroup.fr/v1/cases/')
-      setData(res.data)
+    setLoading(true)
+    fetch('https://covid-api.mmediagroup.fr/v1/cases/')
+    .then(res=>{
+      return res.json()
+    })
+    .then(res=>{
       setLoading(false)
-    }
-    fetchPosts()
+      setData(res)
+    })
+    .catch(err=>{
+      setLoading(false)
+      alert("Something went wrong!\nPlease try later.")
+      setData(err)
+    })
   },[])
   return (
     <Router basename={'/covid-info'}>
